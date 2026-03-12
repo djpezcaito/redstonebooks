@@ -1,4 +1,5 @@
 # Redstone Books
+![Logo del MOD RedStone Books.](https://github.com/djpezcaito/redstonebooks/blob/a8491158d4d2c65b60661364064137ae7f7c88df/src/main/resources/logo.png)
 
 Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1
 
