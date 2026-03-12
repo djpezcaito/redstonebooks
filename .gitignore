@@ -1,0 +1,11 @@
+build/
+run/
+.gradle/
+logs/
+out/
+
+*.log
+*.class
+
+.idea/
+.vscode/

@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="redstonebooks"
+version="${mod_version}"
+displayName="Redstone Books"
+authors="djpezcaito"
+
+description='''
+Cinematic book GUI system for Minecraft Forge 1.20.1
+
+Features:
+- Animated book opening
+- JSON configurable books
+- Typewriter text effect
+- Voice per page
+- Fade transitions
+- Reverse animation
+- Layout per book
+'''
+
+logoFile="logo.png"
+
+[[dependencies.redstonebooks]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.redstonebooks]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
