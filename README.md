@@ -52,7 +52,7 @@ Pensado para:
 Comando:
     /redstonebook open <id>
         
-    Ejemplo: /redstonebook open guardian
+    [!NOTE]Ejemplo: /redstonebook open guardian
 
 El libro se carga desde:
     config/redstonebooks/books/guardian.json
@@ -63,7 +63,7 @@ El libro se carga desde:
 Se crea automáticamente:
     config/redstonebooks/books/
 
-Cada archivo JSON define un libro con sus propias características. Por ejemplo:
+[!NOTE]Cada archivo JSON define un libro con sus propias características. Por ejemplo:
     config/redstonebooks/books/guardian.json
     config/redstonebooks/books/intro.json
     config/redstonebooks/books/note1.json
@@ -72,7 +72,7 @@ Cada archivo JSON define un libro con sus propias características. Por ejemplo:
 Las imágenes del libro se cargan desde el resourcepack:
     assets/redstonebooks/textures/gui/books/<tema>/
     
-Ejemplo:
+[!NOTE]Ejemplo:
     assets/redstonebooks/textures/gui/books/guardian/book_cover.png
     assets/redstonebooks/textures/gui/books/guardian/book_reading.png
     assets/redstonebooks/textures/gui/books/guardian/anim/frame_001.png
@@ -155,26 +155,30 @@ Ejemplo:
   ]
 }
 
+```
+
 ---
 
 ## Parámetros disponibles
 
-meta
-    Parámetro	            Descripción
-    title	                Título del libro
+| `meta` |
+    | Parámetro | Descripción |
+    | --- | --- |
+    | `title` | Título del libro |
 
-theme
-    Parámetro	            Descripción
-    folder	                carpeta de texturas
+| `theme` |
+    | Parámetro | Descripción |
+    | --- | --- |
+    | `folder` | carpeta de texturas |
 
-animation
-    Parámetro	            Descripción
-    enabled	                usar animación
-    folder	                carpeta de frames
-    frameCount	            número de frames
-    frameRate	            velocidad
+| `animation` |
+    | Parámetro | Descripción |
+    | `enabled` | usar animación |
+    | `folder` | carpeta de frames |
+    | `frameCount` | número de frames |
+    | `frameRate` | velocidad |
 
-assets
+| assets |
     Parámetro	            Descripción
     cover	                imagen libro cerrado
     reading	                imagen libro abierto
