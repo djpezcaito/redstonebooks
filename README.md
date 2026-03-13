@@ -1,13 +1,9 @@
+# Redstone Books
 <p align="center">
 <img src="docs/logo.png" width="300">
 </p>
 
-Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1
-
-Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones, efectos de transición y configuración completa desde archivos JSON.
-
 Pensado para:
-
 - Cinemáticas
 - Misiones
 - RPG / aventuras
@@ -15,6 +11,10 @@ Pensado para:
 - Mapas personalizados
 - Servidores
 - Mods con historia
+  
+![Banner](docs/banner.png)
+Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1
+Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones, efectos de transición y configuración completa desde archivos JSON.
 
 ---
 
@@ -247,6 +247,9 @@ donde [tema] será el nombre del libro.
 | `voiceVolume` | volumen |
 | `voicePitch` | tono |
 
+## Showcase
+
+![Showcase](docs/showcase.png)
 ---
 
 LICENCIA
