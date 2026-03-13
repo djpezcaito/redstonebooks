@@ -1,4 +1,5 @@
 # Redstone Books
+![Logo del MOD RedStone Books.](https://github.com/djpezcaito/redstonebooks/blob/a8491158d4d2c65b60661364064137ae7f7c88df/src/main/resources/logo.png)
 
 Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1
 
@@ -50,12 +51,16 @@ Pensado para:
 ## Uso básico
 
 Comando:
-    /redstonebook open <id>
+    /redstonebook open \<id>
         
-    [!NOTE]Ejemplo: /redstonebook open guardian
+> [!NOTE]
+> Por ejemplo:
+> /redstonebook open guardian
+
 
 El libro se carga desde:
     config/redstonebooks/books/guardian.json
+
 ---
 
 ## Carpeta de configuración
@@ -63,19 +68,24 @@ El libro se carga desde:
 Se crea automáticamente:
     config/redstonebooks/books/
 
-[!NOTE]Cada archivo JSON define un libro con sus propias características. Por ejemplo:
-    config/redstonebooks/books/guardian.json
-    config/redstonebooks/books/intro.json
-    config/redstonebooks/books/note1.json
+Cada archivo JSON define un libro con sus propias características.
+
+> [!NOTE]
+> Por ejemplo: \
+> config/redstonebooks/books/guardian.json \
+> config/redstonebooks/books/intro.json \
+> config/redstonebooks/books/note1.json
     
 ## Carpeta de texturas
-Las imágenes del libro se cargan desde el resourcepack:
-    assets/redstonebooks/textures/gui/books/<tema>/
+Las imágenes del libro se cargan desde el resourcepack: \
+assets/redstonebooks/textures/gui/books/[tema]/ \
+donde [tema] será el nombre del libro.
     
-[!NOTE]Ejemplo:
-    assets/redstonebooks/textures/gui/books/guardian/book_cover.png
-    assets/redstonebooks/textures/gui/books/guardian/book_reading.png
-    assets/redstonebooks/textures/gui/books/guardian/anim/frame_001.png
+> [!NOTE]
+> Por ejemplo: \
+> assets/redstonebooks/textures/gui/books/guardian/book_cover.png \
+> assets/redstonebooks/textures/gui/books/guardian/book_reading.png \
+> assets/redstonebooks/textures/gui/books/guardian/anim/frame_001.png
 
 ---
 
@@ -161,72 +171,80 @@ Las imágenes del libro se cargan desde el resourcepack:
 
 ## Parámetros disponibles
 
-| `meta` |
-    | Parámetro | Descripción |
-    | --- | --- |
-    | `title` | Título del libro |
+ `meta` 
+| Parámetro | Descripción |
+|-----:|-----------|
+| `title` | Título del libro |
 
-| `theme` |
-    | Parámetro | Descripción |
-    | --- | --- |
-    | `folder` | carpeta de texturas |
+ `theme`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `folder` | carpeta de texturas |
 
-| `animation` |
-    | Parámetro | Descripción |
-    | `enabled` | usar animación |
-    | `folder` | carpeta de frames |
-    | `frameCount` | número de frames |
-    | `frameRate` | velocidad |
+ `animation` 
+| Parámetro | Descripción |
+|-----:|-----------|
+| `enabled` | usar animación |
+| `folder` | carpeta de frames |
+| `frameCount` | número de frames |
+| `frameRate` | velocidad |
 
-| assets |
-    Parámetro	            Descripción
-    cover	                imagen libro cerrado
-    reading	                imagen libro abierto
+ `assets` 
+| Parámetro | Descripción |
+|-----:|-----------|
+| `cover` | imagen libro cerrado |
+| `reading` | imagen libro abierto |
 
-options
-    Parámetro	            Descripción
-    hideHud	                oculta HUD
-    lockInput	            bloquea controles
-    autoAdvance	            pasa páginas solo
-    pageTurnTicks	        tiempo cambio
-    showPageIndicator       mostrar número
+`options`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `hideHud` | oculta HUD |
+| `lockInput` | bloquea controles |
+| `autoAdvance` | pasa páginas automáticamente |
+| `pageTurnTicks` | tiempo cambio |
+| `showPageIndicator` | mostrar número |
 
-style
-    Parámetro	            Descripción
-    textScale	            escala texto
-    align	                LEFT / CENTER / RIGHT
-    lineSpacing	            espacio líneas
-    textColor	            color
-    textShadow	            sombra
+`style`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `textScale` | escala texto |
+| `align` | LEFT / CENTER / RIGHT |
+| `lineSpacing` | espacio líneas |
+| `textColor` | color |
+| `textShadow` | sombra |
 
-typewriter
-    Parámetro	            Descripción
-    enabled	                activar
-    charsPerTick	        velocidad
-    startDelay	            retraso
+`typewriter`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `enabled` | activar |
+| `charsPerTick` | velocidad |
+| `startDelay` | retraso |
 
-layout
-    Parámetro	            Descripción
-    openBookWidth	        tamaño
-    openBookHeight	        tamaño
-    textStartX	            posición
-    textStartY	            posición
-    textWidth	            ancho
-    textHeight	            alto
+`layout`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `openBookWidth` | tamaño del libro en ancho |
+| `openBookHeight` | tamaño del libro en alto |
+| `textStartX` | posición X |
+| `textStartY` | posición Y |
+| `textWidth` | ancho del texto |
+| `textHeight` | alto del texto |
 
-transition
-    Parámetro	            Descripción
-    fadeOutTicks	        fade salida
-    blackHoldTicks	        negro
-    fadeInTicks	            fade entrada
+`transition`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `fadeOutTicks` | fade salida |
+| `blackHoldTicks` | negro |
+| `fadeInTicks` | fade entrada |
 
-pages
-    Parámetro	            Descripción
-    durationTicks	        duración
-    text	                texto
-    voiceSound	            sonido
-    voiceVolume	            volumen
-    voicePitch	            tono
+`pages`
+| Parámetro | Descripción |
+|-----:|-----------|
+| `durationTicks` | duración |
+| `text` | texto |
+| `voiceSound` | sonido |
+| `voiceVolume` | volumen |
+| `voicePitch` | tono |
 
 ---
 
