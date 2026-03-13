@@ -1,0 +1,14 @@
+{
+  "id": "intro",
+
+  "theme": {
+    "folder": "intro"
+  },
+
+  "pages": [
+    {
+      "durationTicks": 160,
+      "text": "Welcome to Redstone Books"
+    }
+  ]
+}

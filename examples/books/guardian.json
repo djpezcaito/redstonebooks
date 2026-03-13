@@ -1,0 +1,48 @@
+{
+  "id": "guardian",
+
+  "meta": {
+    "title": "CRÓNICAS DEL GUARDIÁN"
+  },
+
+  "theme": {
+    "folder": "guardian"
+  },
+
+  "animation": {
+    "enabled": true,
+    "folder": "guardian/anim",
+    "frameCount": 143,
+    "frameRate": 1
+  },
+
+  "layout": {
+    "mode": "single_page",
+
+    "openBookWidth": 0.74,
+    "openBookHeight": 0.74,
+
+    "textStartX": 0.55,
+    "textStartY": 0.14,
+    "textWidth": 0.30,
+    "textHeight": 0.60
+  },
+
+  "style": {
+    "textScale": 1.0,
+    "align": "LEFT",
+    "lineSpacing": 1,
+    "textColor": "#1E1A16",
+    "textShadow": false
+  },
+
+  "pages": [
+    {
+      "durationTicks": 200,
+      "text": "Example text page",
+      "voiceSound": "",
+      "voiceVolume": 1.0,
+      "voicePitch": 1.0
+    }
+  ]
+}
