@@ -1,11 +1,12 @@
-# Examples
+Examples
 
 Example configuration files for Redstone Books
 
-Copy JSON files to
+1. Copy JSON files to:
+   config/redstonebooks/books/
 
-config/redstonebooks/books/
+2. Copy textures to:
+   assets/redstonebooks/textures/books/<id>/
 
-Copy textures to resourcepack
-
-assets/redstonebooks/textures/gui/books/
+3. Copy sounds to:
+   assets/redstonebooks/sounds/books/<id>/
