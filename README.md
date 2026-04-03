@@ -77,8 +77,8 @@ Cada libro es completamente independiente.
     config/redstonebooks/books/<id>.json
 
 ### Resourcepack
-assets/redstonebooks/
-├── textures/books/<id>/
+assets/redstonebooks/ \
+├── textures/books/<id>/ \
 └── sounds/books/<id>/
 
 ---
@@ -89,8 +89,8 @@ Se crea automáticamente:
     config/redstonebooks/books/
 
 Ejemplos:
-    config/redstonebooks/books/guardian.json
-    config/redstonebooks/books/intro.json
+    config/redstonebooks/books/guardian.json \
+    config/redstonebooks/books/intro.json \
     config/redstonebooks/books/note1.json
 
 ---
