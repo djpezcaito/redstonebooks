@@ -13,7 +13,8 @@ Pensado para:
 - Mods con historia
   
 ![Banner](docs/banner.png)
-Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1
+
+Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1  
 Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones, efectos de transición y configuración completa desde archivos JSON.
 
 ---
@@ -40,11 +41,13 @@ Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones
 
 ## Instalación
 
-1. Instalar Forge 1.20.1 (si no lo tienes instalado ya previamente, claro)
-2. Copiar el archivo '.jar' en:
-        .minecraft/mods/
-    o en servidor:
-        server/mods/
+1. Instalar Forge 1.20.1  
+2. Copiar el archivo `.jar` en:
+    .minecraft/mods/
+    o en el servidor:
+    server/mods/
+
+
 3. Iniciar el juego
 
 ---
@@ -52,15 +55,31 @@ Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones
 ## Uso básico
 
 Comando:
-    /redstonebook open \<id>
-        
-> [!NOTE]
-> Por ejemplo:
-> /redstonebook open guardian
+    /redstonebook open <id>
 
+
+> [!NOTE]  
+> Ejemplo:
+> ```
+> /redstonebook open guardian
+> ```
 
 El libro se carga desde:
-    config/redstonebooks/books/guardian.json
+    config/redstonebooks/books/<id>.json
+
+---
+
+## 📁 Estructura del sistema (v1.1.0)
+
+Cada libro es completamente independiente.
+
+### Configuración
+    config/redstonebooks/books/<id>.json
+
+### Resourcepack
+assets/redstonebooks/
+├── textures/books/<id>/
+└── sounds/books/<id>/
 
 ---
 
@@ -69,24 +88,53 @@ El libro se carga desde:
 Se crea automáticamente:
     config/redstonebooks/books/
 
-Cada archivo JSON define un libro con sus propias características.
+Ejemplos:
+    config/redstonebooks/books/guardian.json
+    config/redstonebooks/books/intro.json
+    config/redstonebooks/books/note1.json
 
-> [!NOTE]
-> Por ejemplo: \
-> config/redstonebooks/books/guardian.json \
-> config/redstonebooks/books/intro.json \
-> config/redstonebooks/books/note1.json
-    
+---
+
 ## Carpeta de texturas
-Las imágenes del libro se cargan desde el resourcepack: \
-assets/redstonebooks/textures/gui/books/[tema]/ \
-donde [tema] será el nombre del libro.
-    
-> [!NOTE]
-> Por ejemplo: \
-> assets/redstonebooks/textures/gui/books/guardian/book_cover.png \
-> assets/redstonebooks/textures/gui/books/guardian/book_reading.png \
-> assets/redstonebooks/textures/gui/books/guardian/anim/frame_001.png
+
+
+assets/redstonebooks/textures/books/<id>/
+
+
+Ejemplo:
+
+
+assets/redstonebooks/textures/books/guardian/book_cover.png
+assets/redstonebooks/textures/books/guardian/book_reading.png
+assets/redstonebooks/textures/books/guardian/anim/frame_001.png
+
+
+---
+
+## Carpeta de sonidos
+
+
+assets/redstonebooks/sounds/books/<id>/
+
+
+Ejemplo:
+
+
+assets/redstonebooks/sounds/books/guardian/guardian_p1.ogg
+assets/redstonebooks/sounds/books/guardian/guardian_p2.ogg
+assets/redstonebooks/sounds/books/guardian/guardian_p3.ogg
+
+
+---
+
+## ⚠️ IMPORTANTE
+
+- No usar `textures/gui/...`
+- Usar siempre:
+
+
+textures/books/<id>/
+
 
 ---
 
@@ -106,7 +154,7 @@ donde [tema] será el nombre del libro.
 
   "animation": {
     "enabled": true,
-    "folder": "guardian/anim",
+    "folder": "anim",
     "frameCount": 143,
     "frameRate": 1
   },
@@ -139,7 +187,7 @@ donde [tema] será el nombre del libro.
   },
 
   "layout": {
-    "mode": "single_page",
+    "mode": "book",
     "openBookWidth": 0.74,
     "openBookHeight": 0.74,
     "textStartX": 0.55,
@@ -159,98 +207,79 @@ donde [tema] será el nombre del libro.
     {
       "durationTicks": 200,
       "text": "Texto de ejemplo",
-      "voiceSound": "redstonebooks:test",
+      "voiceSound": "redstonebooks:books.guardian.guardian_p1",
       "voiceVolume": 1.0,
       "voicePitch": 1.0
     }
   ]
 }
+🎵 Sonido
 
-```
+Ejemplo de sounds.json:
 
----
-
-## Parámetros disponibles
-
- `meta` 
-| Parámetro | Descripción |
-|-----:|-----------|
-| `title` | Título del libro |
-
- `theme`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `folder` | carpeta de texturas |
-
- `animation` 
-| Parámetro | Descripción |
-|-----:|-----------|
-| `enabled` | usar animación |
-| `folder` | carpeta de frames |
-| `frameCount` | número de frames |
-| `frameRate` | velocidad |
-
- `assets` 
-| Parámetro | Descripción |
-|-----:|-----------|
-| `cover` | imagen libro cerrado |
-| `reading` | imagen libro abierto |
-
-`options`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `hideHud` | oculta HUD |
-| `lockInput` | bloquea controles |
-| `autoAdvance` | pasa páginas automáticamente |
-| `pageTurnTicks` | tiempo cambio |
-| `showPageIndicator` | mostrar número |
-
-`style`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `textScale` | escala texto |
-| `align` | LEFT / CENTER / RIGHT |
-| `lineSpacing` | espacio líneas |
-| `textColor` | color |
-| `textShadow` | sombra |
-
-`typewriter`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `enabled` | activar |
-| `charsPerTick` | velocidad |
-| `startDelay` | retraso |
-
-`layout`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `openBookWidth` | tamaño del libro en ancho |
-| `openBookHeight` | tamaño del libro en alto |
-| `textStartX` | posición X |
-| `textStartY` | posición Y |
-| `textWidth` | ancho del texto |
-| `textHeight` | alto del texto |
-
-`transition`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `fadeOutTicks` | fade salida |
-| `blackHoldTicks` | negro |
-| `fadeInTicks` | fade entrada |
-
-`pages`
-| Parámetro | Descripción |
-|-----:|-----------|
-| `durationTicks` | duración |
-| `text` | texto |
-| `voiceSound` | sonido |
-| `voiceVolume` | volumen |
-| `voicePitch` | tono |
-
-## Showcase
-
-![Showcase](docs/showcase.png)
----
+{
+  "books.guardian.guardian_p1": {
+    "sounds": [
+      {
+        "name": "books/guardian/guardian_p1",
+        "stream": true
+      }
+    ]
+  }
+}
+🧪 Testing
+/playsound redstonebooks:books.guardian.guardian_p1 master @p
+Showcase
 
 LICENCIA
+
 All Rights Reserved
+
+CHANGELOG
+v1.1.0
+🔧 Estabilidad
+Recuperada la base estable del proyecto desde GitHub
+Corregidas las rutas de texturas de animación del libro
+Solucionado el problema de animaciones (cuadros rosa/negro)
+🎬 Sistema de libros
+Actualizado el archivo de ejemplo guardian.json
+Soporte completo para animaciones por libro
+Soporte para audio por página funcional
+📁 Nueva estructura de contenidos
+Ahora cada libro puede tener su propio directorio
+Separación de configuración, texturas y sonidos por libro
+Sistema preparado para múltiples libros personalizados
+
+Estructura recomendada:
+
+config/redstonebooks/books/<id>.json
+assets/redstonebooks/textures/books/<id>/
+assets/redstonebooks/sounds/books/<id>/
+🎵 Audio
+Sistema de reproducción validado con resourcepacks externos
+Compatible con sounds.json del resourcepack
+
+⚠️ Cambios importantes:
+La estructura de rutas ha cambiado respecto a versiones anteriores.
+Es necesario adaptar los resourcepacks existentes.
+
+
+---
+
+# ✅ Qué has mejorado con esto
+
+- Documentación alineada con el código real  
+- Evitas errores típicos (modo `single_page`, rutas mal)  
+- Preparado para usuarios externos (muy importante)  
+- Listo para modpacks  
+
+---
+
+# 🎯 Siguiente paso recomendado
+
+Subir esto + release:
+
+```bash
+git add .
+git commit -m "Update README and release v1.1.0"
+git push origin main

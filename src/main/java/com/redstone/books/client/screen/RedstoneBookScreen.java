@@ -273,18 +273,29 @@ public class RedstoneBookScreen extends Screen {
 
         return ResourceLocation.fromNamespaceAndPath(
                 RedstoneBooks.MODID,
-                "textures/gui/books/" + folder + "/" + name
+                "textures/books/" + folder + "/" + name
         );
     }
 
     private ResourceLocation animFrame(int frame) {
-        String folder = (book.animation != null
-                && book.animation.folder != null
-                && !book.animation.folder.isBlank())
-                ? book.animation.folder
-                : "guardian/anim";
+        String bookFolder = "guardian";
 
-        String path = String.format("textures/gui/books/%s/frame_%03d.png", folder, frame);
+        if (book.theme != null && book.theme.folder != null && !book.theme.folder.isBlank()) {
+            bookFolder = book.theme.folder;
+        }
+
+        String animFolder = "anim";
+
+        if (book.animation != null && book.animation.folder != null && !book.animation.folder.isBlank()) {
+            animFolder = book.animation.folder;
+        }
+
+        String path = String.format(
+                "textures/books/%s/%s/frame_%03d.png",
+                bookFolder,
+                animFolder,
+                frame
+        );
 
         return ResourceLocation.fromNamespaceAndPath(
                 RedstoneBooks.MODID,
