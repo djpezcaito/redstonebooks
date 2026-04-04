@@ -55,7 +55,7 @@ Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones
 ## Uso básico
 
 Comando:
-    /redstonebook open <id>
+    `/redstonebook open <id>`
 
 
 > [!NOTE]  
@@ -65,7 +65,7 @@ Comando:
 > ```
 
 El libro se carga desde:
-    config/redstonebooks/books/<id>.json
+    `config/redstonebooks/books/<id>.json`
 
 ---
 
@@ -74,12 +74,12 @@ El libro se carga desde:
 Cada libro es completamente independiente.
 
 ### Configuración
-    config/redstonebooks/books/<id>.json
+    `config/redstonebooks/books/<id>.json`
 
 ### Resourcepack
 assets/redstonebooks/ \
-├── textures/books/<id>/ \
-└── sounds/books/<id>/
+├── `textures/books/<id>/` \
+└── `sounds/books/<id>/`
 
 ---
 
@@ -88,7 +88,7 @@ assets/redstonebooks/ \
 Se crea automáticamente:
     config/redstonebooks/books/
 
-Ejemplos:
+Ejemplos:\
     config/redstonebooks/books/guardian.json \
     config/redstonebooks/books/intro.json \
     config/redstonebooks/books/note1.json
@@ -98,14 +98,14 @@ Ejemplos:
 ## Carpeta de texturas
 
 
-assets/redstonebooks/textures/books/<id>/
+`assets/redstonebooks/textures/books/<id>/`
 
 
 Ejemplo:
 
 
-assets/redstonebooks/textures/books/guardian/book_cover.png
-assets/redstonebooks/textures/books/guardian/book_reading.png
+assets/redstonebooks/textures/books/guardian/book_cover.png \
+assets/redstonebooks/textures/books/guardian/book_reading.png \
 assets/redstonebooks/textures/books/guardian/anim/frame_001.png
 
 
@@ -114,14 +114,14 @@ assets/redstonebooks/textures/books/guardian/anim/frame_001.png
 ## Carpeta de sonidos
 
 
-assets/redstonebooks/sounds/books/<id>/
+`assets/redstonebooks/sounds/books/<id>/`
 
 
 Ejemplo:
 
 
-assets/redstonebooks/sounds/books/guardian/guardian_p1.ogg
-assets/redstonebooks/sounds/books/guardian/guardian_p2.ogg
+assets/redstonebooks/sounds/books/guardian/guardian_p1.ogg \
+assets/redstonebooks/sounds/books/guardian/guardian_p2.ogg \
 assets/redstonebooks/sounds/books/guardian/guardian_p3.ogg
 
 
@@ -133,7 +133,7 @@ assets/redstonebooks/sounds/books/guardian/guardian_p3.ogg
 - Usar siempre:
 
 
-textures/books/<id>/
+`textures/books/<id>/`
 
 
 ---
@@ -214,10 +214,11 @@ textures/books/<id>/
   ]
 }
 ```
-🎵 Sonido
+
+## 🎵 Sonido
 
 Ejemplo de sounds.json:
-
+```json
 {
   "books.guardian.guardian_p1": {
     "sounds": [
@@ -228,59 +229,86 @@ Ejemplo de sounds.json:
     ]
   }
 }
-🧪 Testing
-/playsound redstonebooks:books.guardian.guardian_p1 master @p
+```
+
+## 🧪 Testing
+/playsound redstonebooks:books.guardian.guardian_p1 master @p \
 Showcase
 
-LICENCIA
+### LICENCIA
 
 All Rights Reserved
 
-CHANGELOG
-v1.1.0
-🔧 Estabilidad
-Recuperada la base estable del proyecto desde GitHub
-Corregidas las rutas de texturas de animación del libro
-Solucionado el problema de animaciones (cuadros rosa/negro)
-🎬 Sistema de libros
-Actualizado el archivo de ejemplo guardian.json
-Soporte completo para animaciones por libro
-Soporte para audio por página funcional
-📁 Nueva estructura de contenidos
-Ahora cada libro puede tener su propio directorio
-Separación de configuración, texturas y sonidos por libro
-Sistema preparado para múltiples libros personalizados
+## CHANGELOG
+
+### v1.1.0
+
+### 🔧 Estabilidad
+- Recuperada la base estable del proyecto desde GitHub
+- Corregidas las rutas de texturas de animación del libro
+- Solucionado el problema de animaciones (cuadros rosa/negro)
+
+### 🎬 Sistema de libros
+- Actualizado el archivo de ejemplo guardian.json
+- Soporte completo para animaciones por libro
+- Soporte para audio por página funcional
+
+### 📁 Nueva estructura de contenidos
+- Ahora cada libro puede tener su propio directorio
+- Separación de configuración, texturas y sonidos por libro
+- Sistema preparado para múltiples libros personalizados
 
 Estructura recomendada:
 
+```text
 config/redstonebooks/books/<id>.json
 assets/redstonebooks/textures/books/<id>/
 assets/redstonebooks/sounds/books/<id>/
+```
 🎵 Audio
-Sistema de reproducción validado con resourcepacks externos
-Compatible con sounds.json del resourcepack
+- Sistema de reproducción validado con resourcepacks externos
+- Compatible con sounds.json del resourcepack
 
 ⚠️ Cambios importantes:
-La estructura de rutas ha cambiado respecto a versiones anteriores.
+- La estructura de rutas ha cambiado respecto a versiones anteriores
+- Es necesario adaptar los resourcepacks existentes
+
+### v1.0.0
+
+🚀 Lanzamiento inicial
+- Sistema base de libros cinematográficos
+- Carga de libros mediante JSON
+- Soporte para múltiples páginas
+- Sistema de autoavance de páginas
+  
+🎬 Renderizado
+- Renderizado de libro en pantalla completa
+- Fondo personalizable por libro
+- Sistema de layout configurable
+  
+✍️ Texto
+- Renderizado de texto multilínea
+- Alineación configurable (LEFT, CENTER, RIGHT)
+- Escala de texto configurable
+- Colores personalizados
+  
+⌨️ Efectos
+- Efecto máquina de escribir
+- Control de velocidad de escritura
+- Delay inicial configurable
+  
+🎵 Audio
+- Reproducción de sonido por página
+- Control de volumen y tono
+  
+⚙️ Opciones
+- Ocultar HUD automáticamente
+- Bloqueo de input del jugador
+- Indicador de página
+  
+📁 Configuración
+- Sistema basado en archivos JSON
+- Soporte para múltiples libros independientes
+
+La estructura de rutas ha cambiado respecto a versiones anteriores. \
 Es necesario adaptar los resourcepacks existentes.
-
-
----
-
-# ✅ Qué has mejorado con esto
-
-- Documentación alineada con el código real  
-- Evitas errores típicos (modo `single_page`, rutas mal)  
-- Preparado para usuarios externos (muy importante)  
-- Listo para modpacks  
-
----
-
-# 🎯 Siguiente paso recomendado
-
-Subir esto + release:
-
-```bash
-git add .
-git commit -m "Update README and release v1.1.0"
-git push origin main
