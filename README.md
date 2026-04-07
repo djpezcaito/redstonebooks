@@ -57,16 +57,18 @@ server/mods/
 ## Uso básico
 
 Comando:
-
+```text
 /redstonebook open <id>
-
+```
 Ejemplo:
+```text
 /redstonebook open guardian
-
+```
 El libro se carga desde:
 
+```text
 config/redstonebooks/books/<id>.json
-
+```
 ---
 
 ## 📁 Estructura del sistema (v1.1.0)
@@ -75,10 +77,11 @@ Cada libro es completamente independiente.
 
 config/redstonebooks/books/<id>.json
 
+```text
 assets/redstonebooks/
 ├── textures/books/<id>/
 └── sounds/books/<id>/
-
+```
 ---
 
 ## Ejemplo completo de JSON
