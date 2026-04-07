@@ -1,115 +1,129 @@
-# Redstone Books
+# 📖 Redstone Books
+
 <p align="center">
-<img src="docs/logo.png" width="300">
+  <img src="docs/logo.png" width="260">
 </p>
 
-Pensado para:
-- Cinemáticas
-- Misiones
-- RPG / aventuras
-- Datapacks
-- Mapas personalizados
-- Servidores
-- Mods con historia
+<p align="center">
+  <img src="https://img.shields.io/badge/Minecraft-1.20.1-brightgreen">
+  <img src="https://img.shields.io/badge/Loader-Forge-blue">
+  <img src="https://img.shields.io/badge/Version-1.1.0-orange">
+  <img src="https://img.shields.io/badge/Status-Stable-success">
+</p>
+
+<p align="center">
+<b>🇬🇧 Cinematic book system for Minecraft</b><br>
+<b>🇪🇸 Sistema de libros cinematográficos para Minecraft</b>
+</p>
+
+---
 
 ![Banner](docs/banner.png)
 
-Sistema de libros cinematográficos configurable por JSON para Minecraft Forge 1.20.1  
-Este mod permite mostrar libros animados en pantalla con texto, voz, animaciones, efectos de transición y configuración completa desde archivos JSON.
+## ✨ Overview
+
+Redstone Books permite crear **libros cinematográficos totalmente personalizados** dentro de Minecraft mediante configuración JSON.
+
+Diseñado para:
+
+* 🎬 Cinemáticas
+* 🧭 RPG / aventuras
+* 🧱 Datapacks
+* 🌍 Servidores
+* 🗺️ Mapas personalizados
+* 📜 Mods narrativos
 
 ---
 
-## Características
+## 🚀 Características principales
 
-- Animación de apertura de libro por frames
-- Animación inversa al cerrar
-- Texto configurable por página
-- Voz por página
-- Efecto máquina de escribir
-- Fade in / fade out configurable
-- Layout configurable por libro
-- Posición del texto configurable
-- Colores configurables
-- Escala configurable
-- Indicador de página opcional
-- Configuración por JSON
-- Soporte para múltiples libros
-- HUD oculto automático
-- Bloqueo de input opcional
+* 📖 Animaciones de libro por frames
+* 🔊 Audio por página (voz/narración)
+* ✍️ Efecto máquina de escribir
+* 🎨 Layout configurable
+* 🌫️ Transiciones (fade in/out)
+* 📚 Soporte para múltiples libros
+* 🧠 Configuración completa mediante JSON
+* 🎮 Control del HUD e input
 
 ---
 
-## Instalación
+## 📦 Instalación
 
-1. Instalar Forge 1.20.1  
-2. Copiar el archivo `.jar` en:
+1. Instalar Forge 1.20.1
+2. Copiar el `.jar` en:
 
+```text
 .minecraft/mods/
+```
 
-o en servidor:
+Servidor:
 
+```text
 server/mods/
+```
 
 3. Iniciar el juego
 
 ---
 
-## Uso básico
+## 🎮 Uso básico
 
-Comando:
 ```text
 /redstonebook open <id>
 ```
+
 Ejemplo:
+
 ```text
 /redstonebook open guardian
 ```
-El libro se carga desde:
+
+Archivo de configuración:
 
 ```text
 config/redstonebooks/books/<id>.json
 ```
+
 ---
 
 ## 📁 Estructura del sistema (v1.1.0)
 
-Cada libro es completamente independiente.
+Cada libro es independiente:
 
+```text
 config/redstonebooks/books/<id>.json
+```
 
 ```text
 assets/redstonebooks/
 ├── textures/books/<id>/
 └── sounds/books/<id>/
 ```
+
 ---
 
-## Ejemplo completo de JSON
+## 🧪 Ejemplo de JSON
 
 ```json
 {
   "id": "guardian",
-
   "meta": {
     "title": "CRÓNICAS DEL GUARDIÁN"
   },
-
   "theme": {
     "folder": "guardian"
   },
-
   "animation": {
     "enabled": true,
     "folder": "anim",
     "frameCount": 143,
     "frameRate": 1
   },
-
   "assets": {
     "cover": "book_cover.png",
     "reading": "book_reading.png"
   },
-
   "options": {
     "hideHud": true,
     "lockInput": true,
@@ -117,7 +131,6 @@ assets/redstonebooks/
     "pageTurnTicks": 8,
     "showPageIndicator": true
   },
-
   "style": {
     "textScale": 1.0,
     "align": "LEFT",
@@ -125,13 +138,11 @@ assets/redstonebooks/
     "textColor": "#1E1A16",
     "textShadow": false
   },
-
   "typewriter": {
     "enabled": true,
     "charsPerTick": 2,
     "startDelay": 10
   },
-
   "layout": {
     "mode": "book",
     "openBookWidth": 0.74,
@@ -141,14 +152,12 @@ assets/redstonebooks/
     "textWidth": 0.30,
     "textHeight": 0.60
   },
-
   "transition": {
     "useFadeBetweenAnimationAndReading": true,
     "fadeOutTicks": 18,
     "blackHoldTicks": 8,
     "fadeInTicks": 20
   },
-
   "pages": [
     {
       "durationTicks": 200,
@@ -165,7 +174,7 @@ assets/redstonebooks/
 
 ## 🎵 Sonido
 
-Ejemplo de sounds.json:
+Ejemplo de `sounds.json`:
 
 ```json
 {
@@ -183,29 +192,37 @@ Ejemplo de sounds.json:
 ---
 
 ## 🧪 Testing
+
 ```text
 /playsound redstonebooks:books.guardian.guardian_p1 master @p
 ```
+
 ---
 
-## Showcase
+## 📸 Showcase
 
 ![Showcase](docs/showcase.png)
 
 ---
 
-## LICENCIA
+## 📄 Licencia
 
 All Rights Reserved
 
 ---
 
-## CHANGELOG
+## 📜 Changelog
 
-### v1.1.0
-- Correcciones de animación
-- Nueva estructura modular
-- Audio funcional
+### 🆕 v1.1.0
 
-### v1.0.0
-- Versión inicial
+* Correcciones de animación (texturas rosa/negro)
+* Nueva estructura modular por libro
+* Sistema de audio completamente funcional
+
+### 🚀 v1.0.0
+
+* Sistema base de libros cinematográficos
+* Configuración mediante JSON
+* Soporte para múltiples páginas
+* Renderizado de texto y efectos
+* Sistema de audio inicial
