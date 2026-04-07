@@ -183,9 +183,9 @@ Ejemplo de sounds.json:
 ---
 
 ## 🧪 Testing
-
+```text
 /playsound redstonebooks:books.guardian.guardian_p1 master @p
-
+```
 ---
 
 ## Showcase
