@@ -4,6 +4,9 @@
   <img src="docs/logo.png" width="260">
 </p>
 
+## 🎬 Preview
+![Preview](docs/preview.gif)
+
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-1.20.1-brightgreen">
   <img src="https://img.shields.io/badge/Loader-Forge-blue">
