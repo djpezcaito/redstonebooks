@@ -8,11 +8,13 @@ Example configuration files and resourcepack structure for Redstone Books.
 
 Copia los archivos JSON en:
 
+```text
 config/redstonebooks/books/
-
+```
 Ejemplo:
+```text
 config/redstonebooks/books/guardian.json
-
+```
 ---
 
 ## 🎨 Resourcepack
@@ -21,24 +23,24 @@ Los recursos (texturas y sonidos) deben estar en un resourcepack activo.
 
 Estructura correcta:
 
-assets/redstonebooks/
-├── textures/
-│   └── books/
-│       └── <id>/
-│           ├── book_cover.png
-│           ├── book_reading.png
-│           └── anim/
-│               ├── frame_001.png
-│               ├── frame_002.png
-│               └── ...
-│
-├── sounds/
-│   └── books/
-│       └── <id>/
-│           ├── sound1.ogg
-│           ├── sound2.ogg
-│           └── ...
-│
+assets/redstonebooks/ \
+├── textures/ \
+│   └── books/ \
+│       └── <id>/\
+│           ├── book_cover.png \
+│           ├── book_reading.png \
+│           └── anim/ \
+│               ├── frame_001.png \
+│               ├── frame_002.png \
+│               └── ... \
+│ \
+├── sounds/ \
+│   └── books/ \
+│       └── <id>/ \
+│           ├── sound1.ogg \
+│           ├── sound2.ogg \
+│           └── ... \
+│ \
 └── sounds.json
 
 ---
@@ -46,10 +48,10 @@ assets/redstonebooks/
 ## 🧱 Ejemplo real (guardian)
 
 textures:
-assets/redstonebooks/textures/books/guardian/
+```text assets/redstonebooks/textures/books/guardian/```
 
 sounds:
-assets/redstonebooks/sounds/books/guardian/
+```text assets/redstonebooks/sounds/books/guardian/```
 
 ---
 
