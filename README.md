@@ -4,105 +4,120 @@
   <img src="docs/logo.png" width="260">
 </p>
 
+<p align="center">
+<b>A cinematic, JSON-driven book system for Minecraft Forge 1.20.1.</b>
+</p>
+
 ## 🎬 Preview
+
 ![Preview](docs/preview.gif)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-1.20.1-brightgreen">
   <img src="https://img.shields.io/badge/Loader-Forge-blue">
-  <img src="https://img.shields.io/badge/Version-1.1.0-orange">
+  <img src="https://img.shields.io/badge/Version-1.2.0-orange">
   <img src="https://img.shields.io/badge/Status-Stable-success">
 </p>
 
 <p align="center">
-<b>🇬🇧 Cinematic book system for Minecraft</b><br>
-<b>🇪🇸 Sistema de libros cinematográficos para Minecraft</b>
+🇬🇧 Cinematic book system for Minecraft<br>
+🇪🇸 Sistema de libros cinematográficos para Minecraft
 </p>
 
 ---
 
 ![Banner](docs/banner.png)
 
-## ✨ Overview
+# ✨ Overview
 
-Redstone Books permite crear **libros cinematográficos totalmente personalizados** dentro de Minecraft mediante configuración JSON.
+Redstone Books is a lightweight Forge mod that allows creators to build fully cinematic books using JSON configuration.
 
-Diseñado para:
+Perfect for:
 
-* 🎬 Cinemáticas
-* 🧭 RPG / aventuras
-* 🧱 Datapacks
-* 🌍 Servidores
-* 🗺️ Mapas personalizados
-* 📜 Mods narrativos
-
----
-
-## 🚀 Características principales
-
-* 📖 Animaciones de libro por frames
-* 🔊 Audio por página (voz/narración)
-* ✍️ Efecto máquina de escribir
-* 🎨 Layout configurable
-* 🌫️ Transiciones (fade in/out)
-* 📚 Soporte para múltiples libros
-* 🧠 Configuración completa mediante JSON
-* 🎮 Control del HUD e input
+- 🎬 Cinematics
+- 🧭 RPG adventures
+- 🗺️ Custom maps
+- 🌍 Multiplayer servers
+- 📜 Story-driven mods
+- 🧱 Datapacks
 
 ---
 
-## 📦 Instalación
+# 🚀 Features
 
-1. Instalar Forge 1.20.1
-2. Copiar el `.jar` en:
+- 📖 Frame-by-frame opening animation
+- 🔊 Voice narration per page
+- ✍️ Typewriter effect
+- 🎨 Fully configurable layouts
+- 🌫️ Fade transitions
+- 📚 Multiple books support
+- 🧠 JSON-driven configuration
+- 🎮 HUD and input control
+- 🌐 Dedicated server support
+- 👥 Multiplayer synchronization
+
+---
+
+# 📦 Installation
+
+Install Forge **1.20.1**
+
+Client:
 
 ```text
 .minecraft/mods/
 ```
 
-Servidor:
+Server:
 
 ```text
 server/mods/
 ```
 
-3. Iniciar el juego
+Launch Minecraft.
 
 ---
 
-## 🎮 Uso básico
+# 🎮 Commands
 
-```text
-/redstonebook open <id>
-```
+| Command | Description |
+|---------|-------------|
+| `/redstonebook open <book>` | Opens a book for yourself. |
+| `/redstonebook open <book> <player>` | Opens a book for a specific player. |
+| `/redstonebook open <book> @a` | Opens a book for all connected players. |
 
-Ejemplo:
+Example:
 
 ```text
 /redstonebook open guardian
 ```
 
-Archivo de configuración:
-
-```text
-config/redstonebooks/books/<id>.json
-```
-
 ---
 
-## 📁 Estructura del sistema (v1.1.0)
+# 📁 Book Structure
 
-Cada libro es independiente:
+Book definitions are stored on the **server**:
 
 ```text
 config/redstonebooks/books/<id>.json
 ```
+
+Resources (textures, animations and audio) are provided by the client resource pack:
 
 ```text
 assets/redstonebooks/
 ├── textures/books/<id>/
 └── sounds/books/<id>/
 ```
+
+---
+
+# 🌐 Multiplayer Architecture
+
+- 📚 Books are loaded from the server.
+- 📡 The server synchronizes book data to clients.
+- 🖼️ Images, animations and audio are loaded locally from the resource pack.
+- ✅ Ensures every player always receives the latest version of every book.
 
 ---
 
@@ -194,7 +209,7 @@ Ejemplo de `sounds.json`:
 
 ---
 
-## 🧪 Testing
+# 🧪 Testing
 
 ```text
 /playsound redstonebooks:books.guardian.guardian_p1 master @p
@@ -202,30 +217,38 @@ Ejemplo de `sounds.json`:
 
 ---
 
-## 📸 Showcase
+# 📸 Showcase
 
 ![Showcase](docs/showcase.png)
 
 ---
 
-## 📄 Licencia
+# 📄 License
 
 All Rights Reserved
 
 ---
 
-## 📜 Changelog
+# 📜 Changelog
 
-### 🆕 v1.1.0
+## 🆕 v1.2.0
 
-* Correcciones de animación (texturas rosa/negro)
-* Nueva estructura modular por libro
-* Sistema de audio completamente funcional
+- 🌐 Dedicated server support.
+- 📡 Network synchronization between server and clients.
+- 📚 Books are loaded directly from the server.
+- 👥 Support for opening books for specific players or all connected players.
+- 🛠 Fixed dedicated server crash caused by client-only classes.
 
-### 🚀 v1.0.0
+## 🆕 v1.1.0
 
-* Sistema base de libros cinematográficos
-* Configuración mediante JSON
-* Soporte para múltiples páginas
-* Renderizado de texto y efectos
-* Sistema de audio inicial
+- 🎞 Fixed animation issues (pink/black textures).
+- 📖 New modular book structure.
+- 🔊 Fully functional audio system.
+
+## 🚀 v1.0.0
+
+- 📚 Base cinematic book system.
+- ⚙ JSON configuration.
+- 📄 Multi-page support.
+- ✨ Text rendering and visual effects.
+- 🔊 Initial audio system.
