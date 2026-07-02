@@ -223,7 +223,7 @@ Ejemplo de `sounds.json`:
 
 ---
 
-# 📄 License
+# ⚖️ License
 
 All Rights Reserved
 
